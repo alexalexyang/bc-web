@@ -1,18 +1,14 @@
 import Link from "next/link";
 import styled from "styled-components";
+import Menu from "./menu";
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Nav = styled.nav`
-  display: flex;
-  gap: 2rem;
-  justify-content: flex-end;
-  padding: 0.5rem 1rem;
-  background-color: antiquewhite;
-`;
+  display: grid;
+    
+  @media (max-width: 766px) {
+    grid-template-columns: 80px auto; 
+  }
+`
 
 interface Props {
   children: JSX.Element | JSX.Element[];
@@ -21,27 +17,7 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return (
     <Wrapper>
-      <Nav>
-        <Link href="/">
-          Home
-        </Link>
-
-        <Link href="/blog/1">
-          Blog
-        </Link>
-
-        <Link href="/biodiversity-singapore">
-          Biodiversity Singapore
-        </Link>
-
-        <Link href="/open-science">
-          Open Science
-        </Link>
-
-        <Link href="/about-us">
-          About us
-        </Link>
-      </Nav>
+      <Menu />
       {children}
     </Wrapper>
   );
