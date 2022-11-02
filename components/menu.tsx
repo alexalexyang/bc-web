@@ -33,23 +33,23 @@ const MenuItems = () => {
   return (
     <>
         <Link href="/">
-          <a>Home</a>
+          Home
         </Link>
 
         <Link href="/blog/1">
-          <a>Blog</a>
+          Blog
         </Link>
 
         <Link href="/biodiversity-singapore">
-          <a>Biodiversity Singapore</a>
+          Biodiversity Singapore
         </Link>
 
         <Link href="/open-science">
-          <a>Open Science</a>
+          Open Science
         </Link>
 
         <Link href="/about-us">
-          <a>About us</a>
+          About us
         </Link>
     </>
   );
