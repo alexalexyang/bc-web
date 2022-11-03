@@ -1,37 +1,49 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { HamburgerIcon } from "./icons";
+import { HamburgerIcon, CancelIcon } from "./icons";
 import { useState } from "react";
 
-const MenuLayout = styled.div`
+const MobileMenuLayout = styled.div`
   display: grid;
   grid-template-rows: 80px auto;
+  background: brown;
+  padding-left: 1.25rem;
+`;
+
+const NavLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: brown;
+  padding-bottom: 1rem;
+  font-size: 3rem;
+  color: white;
 `;
 
 const Menu = () => {
     const [isOpen, toggleMenu ] = useState(false); 
 
     return ( 
-        isOpen 
+        isOpen
         ? 
-            <MenuLayout> 
+            <MobileMenuLayout> 
               <button onClick={() => toggleMenu(!isOpen)}>
-                <HamburgerIcon />
+                <CancelIcon />
               </button>
               <MenuItems />
-            </MenuLayout> 
-        : 
-            <MenuLayout>
+            </MobileMenuLayout> 
+        : <>
+            <MobileMenuLayout>
                 <button onClick={() => toggleMenu(!isOpen)}>
-                    <HamburgerIcon />
+                  <HamburgerIcon />
                 </button>
-            </MenuLayout> 
+            </MobileMenuLayout> 
+          </>
     )
 };
 
 const MenuItems = () => {
   return (
-    <>
+    <NavLayout>
         <Link href="/">
           Home
         </Link>
@@ -51,7 +63,7 @@ const MenuItems = () => {
         <Link href="/about-us">
           About us
         </Link>
-    </>
+    </NavLayout>
   );
 };
 

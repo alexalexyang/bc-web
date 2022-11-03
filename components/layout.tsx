@@ -1,13 +1,10 @@
-import Link from "next/link";
 import styled from "styled-components";
 import Menu from "./menu";
+import { breakpoints } from "../styles/constants";
 
 const Wrapper = styled.div`
-  display: grid;
-    
-  @media (max-width: 766px) {
-    grid-template-columns: 80px auto; 
-  }
+  display: flex;
+  flex-direction: column;
 `
 
 interface Props {
