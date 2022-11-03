@@ -39,6 +39,14 @@ const MobileNavLayout = styled.nav`
   padding-bottom: 1rem;
   font-size: 2rem;
   color: white;
+
+  a {
+    margin-right: 1.25rem;
+  }
+
+  a:hover {
+    background-color: #401912;
+  }
 `;
 
 const Menu = () => {
