@@ -23,21 +23,17 @@ const Menu = () => {
     const [isOpen, toggleMenu ] = useState(false); 
 
     return ( 
-        isOpen
-        ? 
+          <>
             <MobileMenuLayout> 
-              <button onClick={() => toggleMenu(!isOpen)}>
-                <CancelIcon />
-              </button>
-              <MenuItems />
-            </MobileMenuLayout> 
-        : <>
-            <MobileMenuLayout>
-                <button onClick={() => toggleMenu(!isOpen)}>
-                  <HamburgerIcon />
-                </button>
-            </MobileMenuLayout> 
-          </>
+              <button
+                onClick={() => toggleMenu(!isOpen)}
+                aria-label={isOpen ? "Click to close menu": "Click to open menu"}
+              >
+                {isOpen ? <CancelIcon />  : <HamburgerIcon />}
+               </button>
+              {isOpen ? <MenuItems />  : []}
+            </MobileMenuLayout>
+          </> 
     )
 };
 
