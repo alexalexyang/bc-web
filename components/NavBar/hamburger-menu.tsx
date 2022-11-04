@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { breakpoints } from "../../styles/constants";
 import { HamburgerIcon, CancelIcon } from "../icons";
 import MenuItems from "./menu-items";
+import { useState } from "react";
 
 const HamburgerMenuLayout = styled.nav`
   display: flex;
@@ -28,11 +29,13 @@ const HamburgerMenuLayout = styled.nav`
   }
 `;
 
-const HamburgerMenu = ({ isOpen,handleToggle }) => {
+const HamburgerMenu = () => {
+  const [isOpen, toggleMenu ] = useState(false); 
+
   return (
     <HamburgerMenuLayout>
       <button
-        onClick={() => handleToggle(!isOpen)}
+        onClick={() => toggleMenu(!isOpen)}
         aria-label={isOpen ? "Click to close menu": "Click to open menu"}
       >
         {isOpen ? <CancelIcon /> : <HamburgerIcon />}
