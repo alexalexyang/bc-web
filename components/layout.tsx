@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import Menu from "./menu";
-import { breakpoints } from "../styles/constants";
+import Menu from "./NavBar/menu";
 
 const Wrapper = styled.div`
   display: flex;

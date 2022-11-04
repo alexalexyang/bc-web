@@ -1,18 +1,11 @@
 import { CenterCol, ImgWrapper, PageWrapper } from "../styles/components";
 import { GetServerSideProps, NextPage } from "next";
 import { getDisplayDatetime, getDomainInfo } from "../util";
-
 import Image from "next/image";
 import { Page } from "../util/types";
 import { PubDate } from "./blog/post/[postId]";
 import SEO from "../components/seo";
 import { pageMapping } from "../util/db";
-
-import styled from "styled-components";
-
-const Heading = styled.h1`
-  font-size= 4px;
-`;
 
 interface Props {
   page: Page;
@@ -29,7 +22,7 @@ const SitePage: NextPage<Props> = ({ page }: Props) => {
 
       <PageWrapper>
         <CenterCol>
-          <Heading>{page.title}</Heading>
+          <h1>{page.title}</h1>
 
           <PubDate>Published: {getDisplayDatetime(page.updated)}</PubDate>
 
