@@ -61,3 +61,40 @@ export const LandingPage = styled.div`
     width: 100%;
   }
 `;
+
+export const MenuLayout = styled.nav`
+  display: none;
+  background: brown;
+  color: white;
+  padding-top: 1rem;
+  font-size: 2rem;
+  gap: 0.75rem;
+
+  @media only screen and (min-width: ${breakpoints.sm}px) {
+    display: flex;
+    justify-content: space-evenly; 
+    padding-bottom: 1rem;
+    text-align: center;
+    line-height: 2rem;
+  }
+`;
+
+export const HamburgerMenuLayout = styled(MenuLayout)`
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+  padding-left: 1.25rem;
+
+  a {
+    margin-right: 1.25rem;
+  }
+
+  a:hover {
+    background-color: #401912;
+  }
+
+  @media only screen and (min-width: ${breakpoints.sm}px) {
+    display: none;
+  }
+`
