@@ -1,12 +1,28 @@
-import HamburgerMenu from './hamburger-menu';
-import NavMenu from "./nav";
+import { useState } from "react";
+import { HamburgerIcon, CancelIcon } from "../icons";
+import MenuItems from "./menu-items";
+import { MobileMenuWrapper, NavWrapper } from "../../styles/components"
+import { DesktopMenuWrapper } from "../../styles/components";
+
 
 const Menu = () => {
+    const [isOpen, toggleMenu ] = useState(false); 
+
     return ( 
-      <>
-        <HamburgerMenu></HamburgerMenu>
-        <NavMenu></NavMenu>
-      </> 
+      <NavWrapper>
+        <MobileMenuWrapper>
+          <button
+            onClick={() => toggleMenu(!isOpen)}
+            aria-label={isOpen ? "Click to close menu": "Click to open menu"}
+          >
+            {isOpen ? <CancelIcon /> : <HamburgerIcon />}
+          </button>
+          {isOpen && <MenuItems />}
+        </MobileMenuWrapper>
+        <DesktopMenuWrapper>
+          <MenuItems />
+        </DesktopMenuWrapper>
+      </NavWrapper> 
     )
 };
 

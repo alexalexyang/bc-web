@@ -62,10 +62,8 @@ export const LandingPage = styled.div`
   }
 `;
 
-export const MenuLayout = styled.nav`
+export const DesktopMenuWrapper = styled.div`
   display: none;
-  background: brown;
-  color: white;
   padding-top: 1rem;
   font-size: 2rem;
   gap: 0.75rem;
@@ -79,12 +77,20 @@ export const MenuLayout = styled.nav`
   }
 `;
 
-export const HamburgerMenuLayout = styled(MenuLayout)`
+export const NavWrapper = styled.nav`
+  background: brown;
+  color: white;
+`;
+
+export const MobileMenuWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 1.25rem;
   padding-top: 1.25rem;
   padding-left: 1.25rem;
+  padding-top: 1rem;
+  font-size: 2rem;
+  gap: 0.75rem;
 
   a {
     margin-right: 1.25rem;
