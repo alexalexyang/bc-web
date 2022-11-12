@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { HamburgerIcon, CancelIcon } from "../icons";
 import MenuItems from "./menu-items";
-import { MobileMenuWrapper, NavWrapper } from "../../styles/components"
-import { DesktopMenuWrapper } from "../../styles/components";
-
+import { MobileMenuWrapper, DesktopMenuWrapper, NavWrapper } from "./menuStyles";
 
 const Menu = () => {
     const [isOpen, toggleMenu ] = useState(false); 
