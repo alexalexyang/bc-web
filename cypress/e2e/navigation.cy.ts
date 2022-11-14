@@ -1,9 +1,9 @@
-describe("navigation", { defaultCommandTimeout: 15000 }, () => {
+describe('navigation', { defaultCommandTimeout: 15000 }, () => {
     beforeEach(() => {
-        cy.visit("http://localhost:3000")
+        cy.visit('http://localhost:3000')
     })
 
-    it("navigation links direct to correct home page", () => {   
+    it('navigation links direct to correct home page', () => {   
         cy.get('a[href="/"]').click()
 
         cy.url().should('include', '/')
@@ -11,7 +11,7 @@ describe("navigation", { defaultCommandTimeout: 15000 }, () => {
         cy.get('h1').contains('Biodiversity Connections')
     })
 
-    it("navigation links direct to correct about us page", () => {   
+    it('navigation links direct to correct about us page', () => {   
         cy.get('a[href="/about-us"]').click()
 
         cy.url().should('include', '/about-us')
@@ -20,7 +20,7 @@ describe("navigation", { defaultCommandTimeout: 15000 }, () => {
     })
 
 
-    it("navigation links direct to correct open science page", () => {   
+    it('navigation links direct to correct open science page', () => {   
         cy.get('a[href="/open-science"]').click()
 
         cy.url().should('include', '/open-science')
@@ -36,14 +36,5 @@ describe("navigation", { defaultCommandTimeout: 15000 }, () => {
 
         cy.get('h1').contains('Biodiversity Singapore')
     })
-
-
-    it("navigation links direct to correct blog page", () => {   
-        cy.get('a[href="/blog/1"]').click()
-
-        cy.url().should('include', '/blog/1')
-
-        cy.get('h1').contains('Blog')
-    })
-  })
+})
   
