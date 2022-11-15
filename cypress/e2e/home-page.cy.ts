@@ -35,3 +35,5 @@ describe('home page', () => {
     cy.get('a[href="/open-science"]').click()
   })
 })
+
+export {}

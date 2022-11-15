@@ -7,3 +7,5 @@ describe('blog', () => {
         cy.get('h1').contains('Blog')
     })
 })
+
+export {}

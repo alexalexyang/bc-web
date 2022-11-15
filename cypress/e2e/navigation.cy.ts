@@ -37,4 +37,6 @@ describe('navigation', { defaultCommandTimeout: 15000 }, () => {
         cy.get('h1').contains('Biodiversity Singapore')
     })
 })
+
+export {}
   

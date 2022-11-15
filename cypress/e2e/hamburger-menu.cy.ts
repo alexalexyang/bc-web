@@ -51,3 +51,5 @@ describe('hamburger menu', () => {
             .should('be.visible')
     })
 })
+
+export {}
